@@ -5,7 +5,276 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naveen Kumar S | Senior Data Analyst</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>/* CSS styles omitted for brevity */</style>
+  <style>
+    :root {
+      --primary: #008080;
+      --secondary: #004d66;
+      --bg: #f5f7fa;
+      --text: #333;
+      --card-bg: #fff;
+      --gray: #888;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+    }
+
+    aside {
+      width: 260px;
+      background: var(--secondary);
+      color: white;
+      padding: 30px 20px;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+    }
+
+    aside img {
+      width: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    aside h1 {
+      font-size: 20px;
+      text-align: center;
+      margin: 10px 0 5px;
+    }
+
+    aside p {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card, .grid-item {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .card:hover, .grid-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .timeline {
+      border-left: 3px solid var(--primary);
+      padding-left: 20px;
+    }
+
+    .timeline .card {
+      position: relative;
+    }
+
+    .timeline .card::before {
+      content: '\2022';
+      color: var(--primary);
+      position: absolute;
+      left: -14px;
+      top: 10px;
+      font-size: 24px;
+    }
+
+    .resume-download {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .icon-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-header i {
+      color: var(--primary);
+    }
+
+    @media screen and (max-width: 768px) {
+      aside {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-<body> <!-- HTML structure omitted for brevity --> </body>
+<body>
+  <aside>
+    <img src="assets/profile.jpg" alt="Naveen Kumar" />
+    <h1>Naveen Kumar S</h1>
+    <p>Senior Data Analyst</p>
+    <nav>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#skills"><i class="fas fa-chart-bar"></i> Skills</a>
+      <a href="#projects"><i class="fas fa-tasks"></i> Projects</a>
+      <a href="#tutorials"><i class="fas fa-video"></i> Tutorials</a>
+      <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+      <a href="#showcase"><i class="fas fa-desktop"></i> Power BI Showcase</a>
+      <a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="about">
+      <div class="icon-header"><i class="fas fa-user"></i><h2>About Me</h2></div>
+      <div class="card">
+        <p>I’m a passionate data analyst with over 8 years of experience transforming raw data into strategic insights. Skilled in Power BI, SQL, Python, Excel, and more.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="icon-header"><i class="fas fa-chart-bar"></i><h2>Skills</h2></div>
+      <div class="grid">
+        <div class="grid-item"><strong>Power BI</strong></div>
+        <div class="grid-item"><strong>SQL</strong></div>
+        <div class="grid-item"><strong>Python</strong></div>
+        <div class="grid-item"><strong>Excel</strong></div>
+        <div class="grid-item"><strong>VBA</strong></div>
+        <div class="grid-item"><strong>Data Modeling</strong></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="icon-header"><i class="fas fa-tasks"></i><h2>Projects</h2></div>
+      <div class="grid">
+        <div class="card">
+          <img src="assets/projects/agri_dashboard.png" alt="Agri Project" style="width: 100%; border-radius: 6px;">
+          <h3>Agri Field Staff Dashboard</h3>
+          <p>Expense tracking dashboard for agricultural field sales force using Power BI.</p>
+        </div>
+        <div class="card">
+          <img src="assets/projects/zomato_analysis.png" alt="Zomato" style="width: 100%; border-radius: 6px;">
+          <h3>Zomato Data Insights</h3>
+          <p>Python-based data analysis on Zomato datasets for trend discovery.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutorials">
+      <div class="icon-header"><i class="fas fa-video"></i><h2>Tutorials</h2></div>
+      <div class="grid">
+        <div class="card">
+          <h3>Power BI Filters</h3>
+          <p><a href="#">Watch Now</a></p>
+        </div>
+        <div class="card">
+          <h3>SQL Basics</h3>
+          <p><a href="#">Read More</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="icon-header"><i class="fas fa-briefcase"></i><h2>Experience</h2></div>
+      <div class="timeline">
+        <div class="card">
+          <h4>Senior Data Analyst – Commonwealth Bank Australia</h4>
+          <p>2020–Present: Built reporting and automation solutions across technology teams.</p>
+        </div>
+        <div class="card">
+          <h4>Data Analyst – Beasant Tech</h4>
+          <p>2016–2020: Mentored 700+ students, developed dashboards and trained professionals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="icon-header"><i class="fas fa-graduation-cap"></i><h2>Education</h2></div>
+      <div class="card">
+        <p>MBA in Business Intelligence & Analytics – Jain University</p>
+        <p>Bachelor’s in Computer Science</p>
+        <p>Certifications: Microsoft Power BI, SQL for Data Analysis, Python for Data Science</p>
+      </div>
+    </section>
+
+    <section id="showcase">
+      <div class="icon-header"><i class="fas fa-desktop"></i><h2>Power BI Showcase</h2></div>
+      <div class="card">
+        <p>Download and explore my interactive dashboards.</p>
+        <a href="assets/Naveen_PowerBI_Sample.pbix" download>Download Sample PBIX</a>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="icon-header"><i class="fas fa-file-pdf"></i><h2>Resume</h2></div>
+      <div class="card">
+        <a class="resume-download" href="assets/Naveen_Resume.pdf" download>Download Resume (PDF)</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="icon-header"><i class="fas fa-envelope"></i><h2>Contact</h2></div>
+      <div class="card">
+        <p><i class="fas fa-envelope"></i> naveen@example.com</p>
+        <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourprofile</p>
+        <p><i class="fab fa-github"></i> github.com/naveenkumar9510</p>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
